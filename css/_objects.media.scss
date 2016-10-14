@@ -1,0 +1,22 @@
+$base-spacing-unit: 10px !default;
+
+.o-media {
+  overflow: hidden;
+}
+
+.o-media__item {
+	display: table-cell;
+	float: left;
+	position: relative;
+	margin-right: $base-spacing-unit;
+  }
+
+.o-media__body {
+	display: table-cell;
+}
+
+// in search for a better name
+.o-media__item--290 {
+	width: 290px;
+	margin-right: $base-spacing-unit*3;
+}

@@ -1,0 +1,13 @@
+@import "settings.config";
+@import "settings.global";
+@import "settings.colors";
+
+//Mixins and helper functions
+@import 'tools.aliases.scss';
+@import 'tools.functions.scss';
+@import 'tools.mixins.scss';
+@import 'tools.typography.scss';
+
+@import 'standalone/elements.page.standalone.scss';
+@import 'standalone/generic.reset.standalone.scss';
+@import 'standalone/generic.normalize.standalone.scss';

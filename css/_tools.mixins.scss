@@ -1,0 +1,82 @@
+///*------------------------------------*\
+//    #MIXINS
+//\*------------------------------------*/
+
+// Global mixins available to the entire project. Define file-specific
+// mixins inside the file to which they relate.
+
+
+
+
+
+// Mixin to create a declaration whose value is a rem unit. Also provide pixel fallback.
+//
+// .simple-usage {
+//   @include rem(padding, 10px);
+// }
+
+@mixin rem($property, $value) {
+    #{$property}: $value;
+    #{$property}: rem($value);
+}
+
+
+//TEST - NOT IN USE
+@mixin dividerLine(){
+    margin-top: $spacing-unit*2;
+    padding-top: $spacing-unit*2;
+    border-top: 1px solid $color-grey-dark;
+}
+
+
+// Mixin to drop micro clearfix into a selector.
+//
+// .simple-usage {
+//   @include clearfix();
+// }
+//
+// .detailed-usage {
+//   @include clearfix(important);
+// }
+
+@mixin clearfix($important: false) {
+
+    // Determine whether or not to make declarations important.
+    @if ($important == false) {
+        $important: null;
+    } @else {
+        $important: !important;
+    }
+
+    &:after {
+        content: "" $important;
+        display: table $important;
+        clear: both $important;
+    }
+
+}
+
+
+
+
+
+// Generate `:hover` and `:focus` styles in one go.
+@mixin hocus() {
+    &:hover,
+    &:focus {
+        @content;
+    }
+}
+
+
+// Opacity
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+//Sprite
+@mixin sprite($posY: 0, $posX: 0){
+  background: url(/app/images/new/sprite_vertical.png) no-repeat transparent $posX $posY;
+}

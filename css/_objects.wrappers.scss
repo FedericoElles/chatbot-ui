@@ -1,0 +1,20 @@
+/*------------------------------------*\
+  #WRAPPERS
+\*------------------------------------*/
+
+.o-content-wrapper {
+    @include clearfix();
+    max-width: $breakpoint-lg;    
+    margin-right: auto;
+    margin-left:  auto;    
+}
+
+
+.o-wrapper {
+    @include clearfix();
+    max-width: $breakpoint-lg;
+    padding-right: $spacing-unit;
+    padding-left:  $spacing-unit;
+    margin-right: auto;
+    margin-left:  auto;
+}

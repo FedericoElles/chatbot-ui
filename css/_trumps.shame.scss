@@ -1,0 +1,28 @@
+
+/**
+* Customize an hr element
+*/
+.u-divider-hr {
+	border: none;
+}
+
+.u-divider {
+	@include dividerLine();
+}
+
+@media screen and (max-width: $breakpoint-lg-max) {
+
+	.u-divider\@md-down {
+		@include dividerLine();
+	}
+
+}
+
+
+@media screen and (min-width: $breakpoint-lg) {
+	
+	.u-divider\@md-up {
+		@include dividerLine();
+	}
+	
+}

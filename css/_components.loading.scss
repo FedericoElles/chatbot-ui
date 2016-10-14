@@ -1,0 +1,83 @@
+
+
+
+.c-loading-bar{
+	position:relative;
+	width:156px;
+	height:19px;
+	margin:auto;
+    margin-bottom: 10px;
+    transition: height 0.5s ease;
+}
+
+.c-loading-bar.is-hidden {
+    height:0px;
+    overflow: hidden;
+}
+
+.c-loading-bar__point{
+	position:absolute;
+	top:0;
+	background-color: $color-brand-special;
+	width:19px;
+	height:19px;
+	animation-name:bounce_floatBarsG;
+	animation-duration:1.69s;
+	animation-iteration-count:infinite;
+	animation-direction:normal;
+	transform:scale(.3);
+}
+
+.c-loading-bar__point--1{
+	left:0;
+	animation-delay:0.68s;
+}
+
+.c-loading-bar__point--2{
+	left:19px;
+	animation-delay:0.85s;
+}
+
+.c-loading-bar__point--3{
+	left:39px;
+	animation-delay:1.01s;
+}
+
+.c-loading-bar__point--4{
+	left:58px;
+	animation-delay:1.18s;
+}
+
+.c-loading-bar__point--5{
+	left:78px;
+	animation-delay:1.35s;
+}
+
+.c-loading-bar__point--6{
+	left:97px;
+	animation-delay:1.52s;
+}
+
+.c-loading-bar__point--7{
+	left:117px;
+	animation-delay:1.69s;
+}
+
+.c-loading-bar__point--8{
+	left:136px;
+	animation-delay:1.86s;
+}
+
+
+
+@keyframes bounce_floatBarsG{
+	0%{
+		transform:scale(1);
+		background-color: $color-brand-special;
+	}
+
+	100%{
+		transform:scale(.3);
+		background-color:rgb(255,255,255);
+	}
+}

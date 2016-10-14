@@ -1,0 +1,40 @@
+.o-flag {
+    display: table;
+    //width: 100%; // why?
+
+
+    &__item,
+    &__body {
+        display: table-cell;
+        vertical-align: middle;
+
+        .o-flag--top & {
+            vertical-align: top;
+        }
+
+        .o-flag--bottom & {
+            vertical-align: bottom;
+        }
+
+    }
+
+    &__item {
+        padding-right: $base-spacing-unit;
+
+        > img {
+            display: block;
+            max-width: none;
+        }
+
+        .o-flag--rev & {
+            padding-right: 0;
+            padding-left: 10px;
+        }
+
+    }
+
+    &__body {
+        width: 100%;
+    }
+	
+}	

@@ -1,0 +1,254 @@
+
+$bgColor1: #FFF;
+$bgColor2: #FAFAFA;
+$borderColor: #EEE;
+$bgRotate:45deg;
+
+$colorAnswerBorder: #3498db;
+$colorAnswerBorderDark: #2980b9;
+$colorQuestion: #9b59b6;
+$colorQuestionDark:#8e44ad;
+
+
+.c-chatbox {
+    background-color: white;
+    border: 1px solid $borderColor;
+    padding:20px;
+    // background:
+    //     linear-gradient($bgRotate, $bgColor1 45px, transparent 45px)64px 64px,
+    //     linear-gradient($bgRotate, $bgColor1 45px, transparent 45px,transparent 91px, $bgColor2 91px, $bgColor2 135px, transparent 135px),
+    //     linear-gradient(-$bgRotate, $bgColor1 23px, transparent 23px, transparent 68px,$bgColor1 68px,$bgColor1 113px,transparent 113px,transparent 158px,$bgColor1 158px);
+    background-color:$bgColor2;
+     
+    background-size: 128px 128px;
+}
+
+
+.c-chatbox__header {
+  border-bottom: 1px solid grey;
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+
+.c-chatbox__header-text {
+    font-size: 20px;
+    padding-left: 2px;
+
+    &:before, &:after {
+        content: ' ';
+        float:left;
+        position: relative;
+        display: inline-block;
+        width: 7px;
+        height: 7px;
+        background-color: $color-brand-special;
+    }
+
+    &:before {
+        top: 6px;
+        left: 4px;
+    }
+    &:after {
+        top: 15px;
+        left: -3px;
+    }    
+}
+
+.c-chatbox__header-hint {
+    font-size: 12px;
+    //text-decoration: underline;
+    cursor: pointer;
+    color: $color-brand-primary;
+}
+
+.c-chatbox__header-about {
+    margin-top: 10px;
+}
+
+.c-chatbox__header-claim {
+    font-size: 10px;
+    vertical-align: bottom;
+}
+
+.c-chatbox__explain {
+    font-size: 14px;
+    color: darkgrey;
+    padding-bottom: 10px;
+}
+
+.c-chatbox__error {
+    padding:10px;
+    color: white;
+    background-color: red;
+    margin-bottom: 20px;
+}
+
+
+.c-chatbox__feedback {
+    position: relative;
+    height: 10px;
+    top: -25px;
+    left: 55px;    
+    font-size: 12px;
+    color: darkgrey;
+}
+
+.c-chatbox__feedback-btn {
+    font-size: 16px;
+    display: inline-block;    
+    padding: 0 3px;
+    cursor: pointer;
+}
+
+.c-chatbox__feedback-btn__yes:before {
+    content: "\01F60A";
+    color: green;
+}
+
+.c-chatbox__feedback-btn__no:before {
+    content: "\01F61E";
+    color:red;
+}
+
+
+.c-chatbox__smartanswer {
+    display: inline-block;
+    background-color: white;
+    color: $colorAnswerBorder;
+    font-weight: 700;
+    border: 2px solid $colorAnswerBorder;
+    border-radius: 20px;
+    line-height: 40px;
+    padding: 0 10px;
+    cursor: pointer;
+    margin-right: 15px;
+    margin-bottom:10px;
+}
+
+
+/* Chat Bubble */
+
+.c-chatbubble{
+    
+    display: block;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.c-chatbubble__avatar{
+    line-height: 40px;
+    width: 40px;
+    text-align:center;
+    font-weight: 300;
+    font-size: 23px;
+    vertical-align: middle;
+    border-radius: 20px;
+    display: inline-block;
+    margin-right: 4.5px;
+}
+
+.c-chatbubble__text{
+    line-height: 20px;
+    border-radius: 20px;
+    display: inline-block;
+    padding: 10px;
+    max-width: 70%;
+
+    /*markdown*/
+    ol {
+        list-style-type: decimal;
+        li{
+            padding-top: 10px;
+            margin-left: 17px;
+        }
+    }
+
+    a {
+        color: white;
+        text-decoration: underline;
+
+        &:hover{
+            color: #FFF59D;
+            text-decoration: none;
+        }
+    }
+
+    blockquote {
+        border-left: 1px solid white;
+        margin-left: 7px;
+        padding-left: 8px; 
+        opacity: 0.7;
+    }
+
+
+}
+
+/* Embedded image or Teaser*/
+.c-chatbubble__media{
+    background-color:white;
+    padding: 10px;
+    border: 1px solid $borderColor;
+}
+
+.c-chatbubble--answer > .c-chatbubble__avatar{
+    background-color: $colorAnswerBorderDark;
+}
+
+.c-chatbubble--answer > .c-chatbubble__text{
+    background-color: $colorAnswerBorder;
+}
+
+.c-chatbubble--question > .c-chatbubble__avatar{
+    background-color: $colorQuestionDark;
+}
+
+.c-chatbubble--question > .c-chatbubble__text{
+    background-color: $colorQuestion;
+}
+
+
+/* Chatbox Input */
+$colorGrey: #ecf0f1;
+$colorGreyDark:  #bdc3c7;
+
+
+.c-chatinput{
+    background-color: $colorGrey;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.c-chatinput-flag__body{
+    padding-left: 0px;
+       
+}
+
+.c-chatinput__text-container{
+   border-radius: 10px;
+   padding: 10px;
+   background-color: white;
+}
+
+.c-chatinput__text{
+    font-family: Arial, Helvetica, sans-serif;
+    border:none;
+    width: 100%;
+    left:10px;
+   
+    padding: 0px 0px;
+    font-size: 18px;
+    line-height: 30px;
+    height: 30px;
+}
+
+.c-chatinput__submit{
+    line-height: 40px;
+    color: white;
+    font-size: 18px;
+    vertical-align: middle;
+    border-radius: 20px;    
+    background-color: $colorQuestionDark;
+    padding: 0 10px;
+    cursor: pointer;
+}

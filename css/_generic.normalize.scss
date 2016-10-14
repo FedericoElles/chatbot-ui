@@ -1,0 +1,13 @@
+// Overriding old CSS just in case
+.u-bemit {
+	font-size: $base-font-size;
+    line-height: $base-line-height;
+	
+	em {
+		font-style: normal;
+	}
+	
+    a:hover{
+		text-decoration: none;	
+	}
+}

@@ -1,0 +1,30 @@
+{
+  "name": "cai",
+  "version": "0.0.2",
+  "description": "WiWo.de Online",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "gulp ci"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://flasnia@bitbucket.org/handelsblatt-gmbh/wiwo-online.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/handelsblatt-gmbh/wiwo-online#readme",
+  "dependencies": {
+    "browser-sync": "^2.12.5",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-load-plugins": "^1.2.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.5.4",
+    "gulp-sass": "^2.3.1",
+    "gulp-sftp": "^0.1.5",
+    "gulp-sourcemaps": "^2.0.0-alpha",
+    "gulp-uncss": "^1.0.5",
+    "gulp-using": "^0.1.0"
+  }
+}
